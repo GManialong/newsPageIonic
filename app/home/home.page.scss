@@ -1,0 +1,16 @@
+.contain {
+  display: grid;
+  background: linear-gradient(0deg, rgba(160, 209, 110, 1) 0%, rgba(145, 246, 141, 1) 100%);
+}
+
+ion-card {
+  background-color: black;
+  border-radius: 30px;
+  
+  &.expanded {
+    height: auto; /* Expand the card to fit content when the expanded class is present */
+  }
+}
+p{
+  padding-top: 20px;
+}

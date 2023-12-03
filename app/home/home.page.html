@@ -1,0 +1,25 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      News
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="contain">
+    <ion-card *ngFor="let card of cards" (click)="toggleCard(card)" [class.expanded]="card.expanded">
+      <ion-card-header>
+        <ion-card-title>{{ card.title }}</ion-card-title>
+        <ion-card-subtitle><a href="{{ card.link }}">{{ card.linkText }}</a></ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content >
+        <ion-img [src]="card.imageSrc"></ion-img>
+        
+        <p *ngIf="card.expanded">Lorem ipsum dolor sit amet consectetur 
+          adipisicing elit. Hic, quas iure nesciunt vero quibusdam asperiores repellendus, odio sapiente similique dolorem si
+          nt ipsum corrupti pariatur cupiditate quod itaque dolorum! Deleniti, facilis?</p>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>
